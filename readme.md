@@ -1,4 +1,4 @@
-#INSTALLATION AND RUN
+# INSTALLATION AND RUN
 
 First of all, install all the dependencies:
 
@@ -15,7 +15,7 @@ Then, build the docker to enable the server:
 And enter via browser to [Main page]('http://manribot:980/index.php')     
 
     
-#DOCKER INSTRUCCIONS     
+# DOCKER INSTRUCCIONS     
     
 Build and initialize the containers:
     
