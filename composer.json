@@ -1,0 +1,14 @@
+{
+    "name": "manri/manri-bot",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jordi Manrique",
+            "email": "jordi.manrique@atrapalo.com"
+        }
+    ],
+    "require": {
+        "longman/telegram-bot": "^0.53.0",
+        "php": "^7.0"
+    }
+}
