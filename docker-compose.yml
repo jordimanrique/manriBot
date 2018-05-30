@@ -10,8 +10,7 @@ services:
     nginx:
         build: ./docker/nginx
         ports:
-            - "980:80"
-            - "9443:443"
+            - "8443:443"
         links:
             - php
         volumes_from:
