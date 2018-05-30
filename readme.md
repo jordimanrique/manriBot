@@ -1,4 +1,4 @@
-# INSTALLATION AND RUN
+## INSTALLATION AND RUN
 
 First of all, install all the dependencies:
 
@@ -8,14 +8,20 @@ Afterwards, set up your localhost with the correct url in your /etc/hosts:
     
     127.0.0.1	manriBot
     
-Then, build the docker to enable the server:
+Then, build the docker to enable the server: 
 
     docker-compose up --build -d manriBot
     
-And enter via browser to [Main page]('http://manribot:980/index.php')     
+And enter via browser to [Main page]('http://manribot:980/index.php'). 
 
-    
-# DOCKER INSTRUCCIONS     
+**Note that the unique open web port is 980**.
+
+### IMPORTANT
+
+In order to run the secure server it has been generated a fake certificate with a private key.
+It's located in docker/nginx as server.crt and server.key 
+
+## DOCKER INSTRUCCIONS     
     
 Build and initialize the containers:
     

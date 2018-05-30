@@ -16,12 +16,15 @@ RUN apt-get install --no-install-recommends --no-install-suggests -y nginx-modul
 RUN apt-get install --no-install-recommends --no-install-suggests -y nginx-module-perl
 RUN apt-get install --no-install-recommends --no-install-suggests -y nginx-module-njs
 RUN apt-get install --no-install-recommends --no-install-suggests -y gettext-base
+RUN apt-get install --no-install-recommends --no-install-suggests -y vim
 RUN rm -rf /var/lib/apt/lists/*
 
 
 COPY nginx.conf /etc/nginx/
 COPY symfony.conf /etc/nginx/conf.d/
 COPY upstream.conf /etc/nginx/conf.d/
+COPY server.crt /etc/nginx/conf.d/ssl.crt
+COPY server.key /etc/nginx/conf.d/ssl.key
 
 RUN id -u www-data &>/dev/null || adduser -D -g '' -u 501 www-data www-data
 
