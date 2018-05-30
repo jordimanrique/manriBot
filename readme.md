@@ -35,4 +35,25 @@ Start and stop the services
 Enter via bash to a container
 
     docker exec -it manribot_nginx_1 bash
+    
+If you are working in this local machine, the only way Telegram server has to access our site, 
+is opening the port via ngrok
+
+    ngrok http 8443
+    
+Then, you should use the forwarding url presented:
+
+    **https://c7ac9684.ngrok.io** -> localhost:8443        
+    
+## WEBHOOK URL ORDERS
+
+There are 2 basic instructions to manipulate the assigned webhook of a bot:
+
+- Set a webhook
+
+    https://api.telegram.org/bot*<bot_id>*/setWebhook?url=https://www.example.com/manribot
+    
+- Get information about the assigned webhook: 
+
+    https://api.telegram.org/bot*<bot_id>*/getWebhookInfo 
 
