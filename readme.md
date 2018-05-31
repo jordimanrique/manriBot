@@ -12,9 +12,17 @@ Then, build the docker to enable the server:
 
     docker-compose up --build -d manriBot
     
-And enter via browser to [Main page]('http://manribot:980/index.php'). 
+Now, the server is up but it needs to be tunneled to the Internet, so:
 
-**Note that the unique open web port is 980**.
+    ngrok http 8443
+             
+And copy the https forwarding that it's presented. It should be something like *https://8891551c.ngrok.io* 
+
+Use the url to set up the webhook:
+
+    http://manribot:8443/index.php?_ngrok_https_forwarding
+    
+From now on you can send the command /guapo and it'll answer you politely :-)
 
 ### IMPORTANT
 
@@ -36,24 +44,16 @@ Enter via bash to a container
 
     docker exec -it manribot_nginx_1 bash
     
-If you are working in this local machine, the only way Telegram server has to access our site, 
-is opening the port via ngrok
-
-    ngrok http 8443
-    
-Then, you should use the forwarding url presented:
-
-    **https://c7ac9684.ngrok.io** -> localhost:8443        
-    
+         
 ## WEBHOOK URL ORDERS
 
 There are 2 basic instructions to manipulate the assigned webhook of a bot:
 
 - Set a webhook
 
-    https://api.telegram.org/bot*<bot_id>*/setWebhook?url=https://www.example.com/manribot
+    https://api.telegram.org/bot580636020:AAHvYhE3kljSpU53frr5aLVivZVbsWhl9hY/setWebhook?url=https://www.example.com/manribot
     
 - Get information about the assigned webhook: 
 
-    https://api.telegram.org/bot*<bot_id>*/getWebhookInfo 
+    https://api.telegram.org/bot580636020:AAHvYhE3kljSpU53frr5aLVivZVbsWhl9hY/getWebhookInfo 
 
