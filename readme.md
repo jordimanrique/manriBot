@@ -20,7 +20,7 @@ And copy the https forwarding that it's presented. It should be something like *
 
 Use the url to set up the webhook:
 
-    http://manribot:8443/index.php?_ngrok_https_forwarding
+    http://manribot:8443/index.php?ngrok=_ngrok_https_forwarding
     
 From now on you can send the command /guapo and it'll answer you politely :-)
 
